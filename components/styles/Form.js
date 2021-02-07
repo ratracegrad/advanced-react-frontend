@@ -28,8 +28,8 @@ const Form = styled.form`
   textarea,
   select {
     width: 100%;
-    padding: 0.5rem;
-    font-size: 1rem;
+    padding: 1rem 0.5rem;
+    font-size: 1.5rem;
     border: 1px solid black;
     &:focus {
       outline: 0;
