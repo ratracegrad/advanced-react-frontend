@@ -1,9 +1,8 @@
-/* eslint-disable react/prop-types */
 import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 import styled from 'styled-components';
-import Product from './Product';
 import { perPage } from '../config';
+import Product from './Product';
 
 export const ALL_PRODUCTS_QUERY = gql`
   query ALL_PRODUCTS_QUERY($skip: Int = 0, $first: Int) {
@@ -18,7 +17,6 @@ export const ALL_PRODUCTS_QUERY = gql`
           publicUrlTransformed
         }
       }
-      status
     }
   }
 `;
@@ -42,7 +40,7 @@ export default function Products({ page }) {
     <div>
       <ProductsListStyles>
         {data.allProducts.map((product) => (
-          <Product product={product} key={product.id} />
+          <Product key={product.id} product={product} />
         ))}
       </ProductsListStyles>
     </div>
